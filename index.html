@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kindle Formatter</title>
+</head>
+<body>
+    <h2>Sube tu archivo Kindle Highlights</h2>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Subir y Formatear</button>
+    </form>
+
+    {% if formatted_text %}
+        <h3>Formato Kindle:</h3>
+        <textarea rows="20" cols="80">{{ formatted_text }}</textarea>
+    {% endif %}
+</body>
+</html>
